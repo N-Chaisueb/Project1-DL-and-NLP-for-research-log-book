@@ -1,0 +1,529 @@
+Parameter Survey for Metrology Light Source II
+Andreas Jankowiak, Natthawut Chaisueb, Arnold Kruschinski, Carsten Mai, Teresia Olsson, Ronja Grünke, and Markus Ries
+Helmholtz-Zentrum Berlin
+March 29, 2025
+Executive Summary
+
+The topic of this parameter survey is a green field design for Metrology Light Source II (MLS II), a
+successor source for MLS I. It is designed by Helmholtz-Zentrum Berlin (HZB) for the PhysikalischTechnische Bundesanstalt (PTB). 
+The design target is a compact, green field electron storage ring based EUV radiation source with fully self-sustained infrastructure. 
+High reliability, high availability, high uptime, and in particular short downtime are important design targets. Therefore, only normal
+conducting technology is chosen for RF system and electromagnets. To achieve highest beam stability,
+top-up operation is a design goal. The special request from the PTB for a tunable electron energy
+in the range from 800 MeV down to 150 MeV excludes the use of permanent magnets in the ring.
+Homogeneous bending magnets are a further design requirement for application as a metrology source.
+User operation in a classical third generation storage ring based light source with a double or quad bend
+achromat is foreseen. The possibility of low-alpha operation to continue the success of MLS I in this are
+is also requested. The scope of this survey is neither a design report nor a detailed cost analysis, instead
+it delivers an overview of the scaling of different parameters, in particular costs. It should be noted
+that the building and costs for technical building equipment (TGA) are not considered – the focus is on
+the accelerator system. In addition, for the cost analysis only the investment costs were estimated at
+this point and no FTE costs for conceptional design, technical design, procurement, implementation,
+commissioning or operation were considered. Within the parameter survey, four different accelerator
+lattices were studied. An overview of footprint and cost are given in Table 1.
+
+The highest uncertainty for the cost estimation is given by the choice of injector, which also has
+the largest potential for savings in case it is considered to descope to a ramped machine similar to
+MLS I. Due to its design target of being a compact ring with low electron energy, the operation costs
+are relatively low compared to other storage ring based light sources. For more precise information for
+a highly optimized design with respect to performance or costs, a detailed technical design process is
+required.
+
+
+Chapter 1
+Motivation
+
+1.1 Status Quo - MLS I
+
+The existing Metrology Light Source MLS (referred to as MLS I in this document to avoid confusion
+with the MLS II) is a third generation synchrotron light source in operation since 2007. This section
+presents the most important features of MLS I from an accelerator physics and operational point of
+view, highlighting special capabilities and operational challenges. For the use cases of synchrotron
+light generated at MLS I, refer to section 1.2. An overview sketch of the machine is shown in Fig. 1.1
+and a list of the most important parameters is given in Table 1.1.
+
+The nominal electron beam energy of MLS I, 629 MeV, is rather low for storage ring synchrotron
+light sources. It is motivated by the use cases being limited to longer wavelengths, up to the extreme
+ultraviolet (EUV), but specifically excluding X-rays, which are served by BESSY II.
+
+MLS I is a ramped machine, meaning that the injector system does not supply electrons at nominal
+energy. Instead, electrons are injected at a lower energy and the storage ring is used to accelerate the
+beam to higher nominal energy for user operation. The injector is a 105 MeV microtron fed from a
+thermionic gun. Accelerating the electron beam with the storage ring from 105 MeV to 629 MeV while
+conserving the full stored beam current of up to 200 mA requires a simultaneous and accurate change
+of all bending and focusing magnet strengths during the ramp procedure, which takes approximately
+ten minutes. This task is performed by an automated control program [1]. The main drawback of
+ramped operation is that top-up, where electrons are replenished at short intervals, keeping the beam
+current essentially constant, is not possible. Instead, injections are performed at MLS I usually twice
+a day, each interrupting user operation for approximately 20 minutes. In between injections, the beam
+current is decaying with a lifetime of minimum six hours (I·τ ≈ 1200 mA h), i.e. typically the intensity
+variation over a normal user run is about a factor of three.
+
+The lattice of MLS I is a four-cell double-bend achromat (DBA) with two long and two short straight
+sections. There are three main operational modes that can be offered in user operation, important
+beam parameters are compared for these modes in Table 1.2. The standard user mode is optimized
+for maximum beam lifetime at a horizontal emittance of 120 nm · rad and is offered for the bulk of
+the user time. The low-alpha mode provides ultra-short bunch lengths to enable coherent emission
+of Terahertz synchrotron radiation, corresponding to enhanced radiation intensity in this frequency
+regime. The low-emittance mode provides minimum horizontal emittance at the expense of lifetime.
+The horizontal emittance can be as low as 25 nm · rad at 629 MeV.
+
+The low-alpha operation mode is noteworthy, as the MLS I has been designed with this mode as a
+target operation mode. Octupole magnets have been incorporated into the lattice, and together with
+an optimized distribution of sextupole magnets, the higher orders of energy-dependent momentum
+compaction can be controlled accurately over a wide range. This allows for a highly flexible low alpha 
+operation mode with capabilities unique worldwide. For accelerator physics research, MLS I is
+therefore a valuable tool to study low-alpha longitudinal beam dynamics and the properties of coherent
+synchrotron radiation [2], and more recently the principle of Steady-State Microbunching (SSMB).
+
+SSMB is a new concept for generating high-power coherent synchrotron radiation from an electron
+storage ring [3]. The concept of SSMB has been evaluated at MLS I in a successful proof-of-principle
+(PoP) experiment campaign ongoing since 2018 [4, 5]. The low-alpha capabilities of MLS I described
+above are crucial for the SSMB PoP effort. A very low momentum compaction is required in the
+experiment to transform the energy modulation supplied from a laser system to the electron beam into
+a physical microbunching structure (see the sketch of the SSMB PoP setup in Fig. 1.2).
+The SSMB PoP experiment is expected to continue with upgrades in the next years. A desirable
+perspective to continue PoP experiments or even realize an SSMB-inspired radiation source at MLS II
+is given if MLS II can provide at least a comparable performance and flexibility in low-alpha operation
+as MLS I.
+
+1.2 Science / Use Case MLS I
+
+The availability of synchrotron radiation in Berlin is of outstanding importance for PTB in serving
+the dynamically developing field of metrology with synchrotron radiation. In this field, PTB currently
+holds a leading position worldwide, in particular for EUV metrology for semiconductor production, and
+optical technologies and nanometrology for the development of functional materials in a large number
+of technological fields. PTB also serves international space agencies with the traceable characterization
+of instruments for space-based astronomy and solar physics. An important basis for this a the decades
+of close cooperation with HZB/BESSY for the operation and use of the storage ring facilities.
+
+PTB has been using synchrotron radiation for metrology for more than 40 years. Currently, the
+storage ring BESSY II is used for the (soft) X-ray range and PTB’s own Metrology Light Source (MLS)
+for lower photon energies and, in particular, for special metrological operations, e.g. as a calculable
+radiation source standard. Together with HZB, which operates both storage rings, PTB has created a
+European Centre for Metrology with synchrotron radiation.
+
+The work of the centre is based on radiation metrology (radiometry). Within the framework of
+services and contract research, detectors and radiation sources are calibrated, and the transmission
+and reflection of optical components are measured. Customers come from both German industry and
+all over the world. The company, which now has over 80 employees, specializes in two main areas:
+
+• Metrology for research and industry
+– Metrology for EUV lithography (EUVL),
+– Characterisation of space instruments detector and optics development
+• Quantitative materials research in collaboration with internal and external partners
+– Nanostructure characterisation
+– Materials and surface analysis
+– Determination of fundamental properties of materials
+
+The most important projects are the large industrial collaborations in metrology for EUVL with
+Carl Zeiss (CZ) SMT in Oberkochen and the Dutch company ASML, the global monopolist for EUVL
+steppers with precision optics from CZ. EUV lithography is an essential tool for the production of highend 
+processors, e.g. for AI, at TSMC, Samsung and Intel. The exclusive production of EUV lithography
+machines for global semiconductor production is a great success for European industry and research
+and PTB contributes to this with its work on EUV metrology. PTB has been cooperating with CZ in
+EUVL development for 25 years. EUVL cooperations also exist with German SMEs such as AMTC
+GmbH in Dresden, Research Instruments GmbH in Bergisch Gladbach or optiX fab GmbH in Jena.
+The field of quantitative materials research with synchrotron radiation has also been developing rapidly
+at PTB for many years, since the quantification of functional material parameters is gaining increasing
+technological importance. The work is carried out in government-funded collaborative projects, but
+there are also bilateral cooperation agreements with German SMEs, such as AXO GmbH in Dresden
+or Si Crystal GmbH in Nuremberg.
+
+For the continuation and further development of this field of work with a unique European position
+and increasing scientific and technical importance beyond the year 2035, PTB proposes a Centre for
+Synchrotron Radiation in Berlin-Adlershof, which combines the successor facilities BESSY III (for
+BESSY II) and MLS II (for MLS I). This combination would make it possible to optimally cover the
+EUV and IR/THz range (which is particularly important for PTB) at MLS II, and optimise the BESSY
+III facility for the soft and tender X-ray range (of importance for energy materials) and hard X-ray
+radiation of metrological quality for other local partners such as the Federal Institute for Materials
+Research and Testing (BAM).
+
+With a view to a successor facility to BESSY II, PTB, in cooperation with HZB, is investigating
+possible options for the realisation of a successor facility MLS II for MLS I as a complementary facility
+to a future BESSY III. In agreement with the Bundesanstalt für Materialforschung und -prüfung BAM,
+PTB’s ideas are directed towards a joint centre for synchrotron radiation with HZB in Berlin-Adlershof,
+consisting of BESSY Ill and an MLS II. In total, it will cover the spectral range from infrared to EUV
+radiation (MLS II) and from EUV to soft X-rays (BESSY Ill). In the sense of complementarity, MLS
+II will provide beamlines for HZB users in the EUV and IR/THz spectral range in addition to the
+beamlines for PTB. In return, PTB will use beamlines in the soft and tender X-ray range at BESSY
+III to the same extent.
+
+For the design studies of MLS II, a synchrotron radiation source optimised for the VUV and EUV
+spectral range as well as for use in the IR/THz range is to be designed. It should offer space for several
+beamlines on deflection magnets and four free straight sections for the installation of IDs. The critical
+energy for the dipoles should be adjustable, but with a maximum of 500 eV based on the desired
+dipole spectral range. This leads to the requirement for a machine which can be ramped between 150
+- 800 MeV. For stability reasons, it is preferable to operate the machine in top-up mode and instead
+of ramping the machine up as in MLS I, the machine should be designed to inject at full energy and
+ramp down when lower energy is desired. The operation current should be 200 mA. It is also crucial
+that the machine has homogenous dipole magnets for metrology applications.
+
+Chapter 2
+Lattice Design
+
+2.1 Design Parameters and Engineering Constraints
+
+MLS II will operate at an electron energy of 800 MeV and will have flexible operating modes with
+adjustable energy and current. So far, two different user modes are foreseen: a standard user mode and
+a low-alpha mode. The standard user mode will offer lower emittance and higher lifetime compared
+to MLS I. The low-alpha mode will produce bunch lengths of a few ps rms for the generation of
+coherent THz radiation [6] and steady-state microbunching (SSMB) experiment [7]. At least two
+straight sections with lengths of around 4–5 meters each are required for RF cavities and injection
+elements, while at least two more straight sections can be filled with insertion devices (IDs).
+
+As explained in section 1.2, a homogeneous field in the dipole magnets is an essential requirement
+for source-based calibrations of space instruments utilizing calculable synchrotron radiation [8]. Thus,
+combined function magnets cannot be used as the dipoles for MLS II. The homogeneous dipole magnet
+will have a bending radius of 2.27 m corresponding to a magnetic field strength of 1.3 T resulting in
+a critical photon energy of 500 eV. The lengths of the quadrupole, sextupole, and octupole magnets
+were initially set to 20 cm, 10 cm, and 10 cm, respectively, but during the design process adjusted
+taking into account space limitations and a conservative limit for the magnetic field strength. The
+space downstream of the quadrupole magnets should be at least 15 cm for installation of beam position
+monitors (BPMs). The space upstream and downstream of the bending magnets should be at least
+25 cm for instrument and magnet installation. The minimum distance between magnets should be 10 cm.
+
+To fulfill these requirements, four different lattice options have been developed. These consist of
+a double-bend achromat (DBA) lattice with either five or six cells and a quadruple-bend achromat
+(QBA) lattice with four or six cells. The properties of the lattice options are shown in Table 2.1. The
+options have different circumferences, harmonic numbers and dipole bending angles. For each lattice
+option, the linear optics for both standard user and low-alpha mode is presented in this report. For
+the standard user mode, the results for optimized nonlinear beam dynamics are shown as well.
+2.2 Design Procedure
+
+This section describes the procedure used during the lattice design. All design studies were performed in
+Elegant [9], without including RF and radiation effects at this point. First, the magnetic field strength
+and position of the quadrupole magnets were matched to achieve dispersion-free straight sections,
+suitable for insertion devices. The natural emittance was then optimized by tuning the horizontal
+dispersion and the H function within the dipole magnets. The horizontal beta function at the straight
+sections was kept symmetric for insertion devices and around 7 - 15 m to meet injection constraints.
+However, extremely low vertical beta along the storage ring results in low Touschek lifetime [10] and
+therefore the vertical beta function was tuned to 1 - 4 m for to ensure sufficient lifetime while at the
+same time generate high brightness radiation. After that, the working point was adjusted to be located
+at a good position in tune space. Both the cell tunes and the ring tunes were chosen to positions far
+from the low-order resonance lines. The ring tunes were also chosen below the half-integer resonance in
+order to reduce the growth time for transverse resistive wall driven coupled-bunch instabilities. For the
+QBA lattice's the horizontal and vertical phase advances between the chromatic sextupoles in the arcs
+were set to π, to satisfy the −I transformer, which compensates the geometric aberration introduced
+by the chromatic sextupoles [11].
+
+Multiobjective optimization algorithm (MOO) was used to reduce the chromatic tune shifts by
+optimizing the strength and position of the chromatic sextupole magnets with the constraint that the
+linear chromaticity should be corrected to +1.0 in both transverse planes. The goal was to maximize
+the momentum acceptance, which affects the beam lifetime. Additionally, harmonic sextupoles were
+used to reduce the amplitude-dependent tune shifts, resulting in increased dynamic aperture which is
+required for good injection efficiency. The target was to achieve an aperture larger than the vacuum
+geometry which could be assumed to be similar to MLS I, ±35 mm in the horizontal and ±21 mm in
+the vertical.
+
+For the low-alpha mode, no optimisation has been done of the nonlinear optics yet, but the linear optics 
+were optimised to achieve a linear momentum compaction around 10−5 by adjusting the
+quadrupole strengths. The positions of all magnets were fixed according to the results of the lattice
+design for the standard user mode.
+
+2.3 DBA Lattice with Six Cells
+
+2.3.1 Linear Optics
+
+The lattice option is made up of six identical DBA cells resulting in a total circumference of 86.4 m.
+Each cell consists of two homogeneous dipole magnets, two families of focusing quadrupoles, one
+family of defocusing quadupoles, two families of chromatic sextupoles, and two families of harmonic
+sextupoles. In addition to the sextupole families that are used to control the second-order term α1 , a
+single octupole has been positioned at the center of the DBA cell to adjust the third-order momentum
+compaction factor α2 in accordance with the design strategy of MLS I [12, 2]. The linear optics of the
+DBA cell for the standard user mode is shown in Fig. 2.1. The lattice structure gives six dispersion-free
+straight sections of 5 m length each. The lattice parameters for the design is shown in Table 2.2. As
+shown in Fig. 2.6, the working point is located away from strong resonances.
+
+2.3.2 Nonlinear Dynamics
+
+The linear chromaticities were corrected and the momentum acceptance optimised by using two families
+of chromatic sextupoles in the arc, while the dynamic aperture was enlarged using two families of
+harmonic sextupoles in the dispersion-free straight section. The fractional tunes of x and y axes in
+Fig. 2.2 show the surviving particles after tracking. Particles with momentum deviation larger than
+about ±9% are getting lost. Furthermore, the geometric acceptance, which can be calculated from
+the vacuum chamber aperture and the maximum dispersion function (see Fig. 2.1), equals to 2.7%.
+As plotted in Fig. 2.3, the momentum acceptance is sufficiently large compared to the geometric
+acceptance. Therefore, the geometrical aperture mainly limits the actual acceptance due to large
+dispersion in the arc.
+
+The fractional tune shifts as function of horizontal and vertical amplitudes shown in Fig. 2.4
+indicate that particles with off-axis hit the half-integer resonance and this limits the dynamic aperture
+of the lattice. The maximum horizontal amplitude is given by the surviving on-momentum particles
+after tracking. As displayed in Fig. 2.5, the dynamic aperture covers much more than the maximum
+geometric aperture of the MLS I vacuum chambers and MLS II is expected to have similar apertures.
+In Fig. 2.6, the footprint of the transverse tune shift with amplitude can be seen as well as the working
+point in tune space.
+
+2.4 DBA Lattice with Five Cells
+
+2.4.1 Linear Optics
+
+The DBA structure with five cells has a circumference of 60 m. The quadrupole strengths and positions
+were tuned considering significant constraints as described in section 2.2. Due to space limitations,
+the five straight sections have a length of 4.4 m. The optical functions for the standard user mode are
+shown in Fig. 2.7 and the lattice parameters in Table 2.3.
+
+2.4.2 Nonlinear Dynamics
+
+Optimisation of the nonlinear optics for the DBA lattice with five cells was performed by using two
+families of chromatic sextupoles and two families of harmonic sextupoles in order to achieve a small
+chromatic tune shift and a small amplitude-dependent tune shift. The momentum acceptance, the
+dynamic aperture, and the frequency map analysis with diffusion rate for the standard user mode
+are plotted in Figs. 2.8 - 2.12. The lattice achieves a large momentum acceptance, and the dynamic
+aperture is larger than 40 mm horizontally and 20 mm vertically, which fulfills the requirements.
+
+2.5 QBA Lattice with Six Cells
+
+2.5.1 Linear Optics
+
+The QBA lattice with six cells has a circumference of 120 m. Each QBA cell consists of two DBA
+cells separated by a short straight section, where two additional sextupoles and one octupole are
+installed to provide better control over the higher-order momentum compaction factor in low-alpha
+mode. The outer two dipoles in the QBA cell influence the dispersion suppression in the straight
+section while, as shown in Fig. 2.13, at the center of the two inner dipoles the horizontal beta function
+and dispersion create a local minima in order to obtain the lowest emittance of the QBA lattice. The
+lattice parameters are listed in Table 2.4.
+
+2.5.2 Nonlinear Dynamics
+
+The momentum acceptance and dynamic aperture optimization of the QBA lattice with six cells for
+the standard user mode was done by adjusting the strength of two families of harmonic sextupoles and
+six families of chromatic sextupoles as well as the positions of the chromatic defocusing sextupoles.
+Figures 2.14 and 2.15 show the momentum acceptance of the lattice. The amplitude-dependent tune
+shifts and dynamic aperture in Figs. 2.16 and 2.17, respectively, are adequately large for off-axis
+injection due to the optimized setting of two harmonic sextupoles. The tune footprint in Fig. 2.18
+indicates that tune shift of the survived particles confines within the half-integer resonance.
+2.6 QBA Lattice with Four Cells
+
+2.6.1 Linear Optics
+
+The QBA lattice with four cells has a circumference of 76.8 m. One QBA cell as shown in Fig. 2.19
+consists of four dipole magnets with identical bending angles, four families of focusing quadrupoles,
+three families of defocusing quadrupoles, seven families of sextupoles and one octupole family. The
+lattice provides four dispersion-free straight sections with 5 m length. A natural emittance of 13 nm rad
+can be reached after tuning the strength and position of the quadrupoles. As for the QBA lattice
+with six cells, the nonlinear effect induced by the chromatic sextupoles was canceled by adjusting the
+transverse phase advances in the arcs to π. The lattice parameters for this QBA lattice are summarized
+in Table 2.5.
+
+2.6.2 Nonlinear Dynamics
+
+For the standard user mode of the QBA lattice with four cells, two families of harmonic sextupoles
+and five chromatic sextupole families were used for nonlinear optimization. Results of the nonlinear
+dynamic optimizations are displayed in Figs. 2.20 - 2.24. The tune resonance diagram shows a small
+tune shift with amplitude and a good choice of working point.
+
+2.7 Low-alpha Mode
+
+The lattice parameters of the low-alpha mode for all four lattice options and a comparison to the
+corresponding values for the standard user mode are listed in Table 2.6. The zero-current bunch
+length of electron bunches in a storage ring is given by[13, 14], where α is the linear momentum compaction factor, 
+δ0 is the spread of the natural energy, fs the synchrotron frequency, E the total electron energy, frev the revolution 
+frequency, and Vrf the time derivative of the voltage at the bunch position where frf is the RF frequency. 
+The low-alpha mode is achieved by reducing the linear momentum compaction factor, which depends on the
+horizontal dispersion in the bending magnets. Therefore, the horizontal dispersion in the bending
+magnets integrated around the ring was reduced in order to attain a linear α in the order of about 10−5 .
+
+The linear optics of the low-alpha mode of all four lattice options are shown in Figs. 2.25 - 2.28.
+As can be seen, the periodicity of the DBA lattice with 5 cells is different from the other options.
+For this lattice, it is considerably more challenging to achieve low-alpha mode compared to the other
+lattice options due to the smaller number of straight sections. This lattice option only provides five
+straight sections, whereof three zero-dispersion straight sections are required for beam injection, an
+RF cavity, and an undulator. Then, only the remaining two straight sections in the middle of Fig. 2.26
+can be used to reduce the α. Therefore, two and a half DBA cells were considered with 15 quadrupole
+strengths as variables compared to the other lattice options, where two cells were used. The figures also
+show that the horizontal dispersion crosses between positive and negative values within the bending
+magnets to reduce the linear α. For all lattice options, the low-alpha mode achieves a linear α of less
+than or equal to 10−5 . The natural emittance is however larger than for the standard user mode. For
+all cases, the working point of the low-alpha mode was tuned to be as close as possible to the working
+point of the standard user mode for smooth transition between operating modes.
+2.8 Conclusion
+
+Four lattice options have been designed, and in all cases the nonlinear optics for the standard user
+mode has been optimized to ensure a sufficiently large dynamic aperture and momentum acceptance.
+Since the nonlinear performance depends significantly on the position of the working point in tune
+space, that has also been optimized. All lattice options can also achieve a low-alpha operation mode
+with adjustable linear momentum compaction factor around the order of 10−5 . A comparison of lattice
+parameters for MLS I and all lattice options for MLS II can be seen in Table 2.7.
+
+The natural emittance of the QBA lattices is lower than that of the DBA lattices, since the natural
+emittance is inversely proportional to the number of bending magnets cubed. The QBA lattice with
+six cells provides the lowest natural emittance, but it requires more magnets and a larger circumference
+than the other lattice options. The total number of magnets for this option is two times greater than
+that for the DBA lattices. The DBA lattice with five cells is the most compact lattice with the shortest
+straight sections and smallest circumference. For the DBA lattice options, the lattice parameters are
+slightly different and therefore trade-offs between the number of magnets, the natural emittance, the
+number of straight section, space requirement and cost have to be considered.
+
+Chapter 3
+Cost Estimates
+
+This chapter gives a rough overview of the expected costs for the accelerator system for the different
+proposed lattice options. For the purpose of comparison, MLS I is also included. The real costs of
+MLS were not scaled by inflation; instead the cost estimation was done in the same fashion as for the
+MLS II lattice options.
+
+3.1 Scope of the Cost Estimation for the Parameter Survey
+
+Due to the complexity of a synchrotron radiation user facility, it is not easy to predict the total costs.
+Therefore, the costs of building and related infrastructure (e.g. cooling) are not being considered in
+this parameter survey. Instead, the footprint of the actual accelerator is being estimated as well as
+its electrical power consumption. No beamline-related radiation protection measures or other types of
+beamline-related costs have been considered. In addition, only investment costs are being considered
+for the accelerator system, i.e. the implementation cost in terms of FTEs are out of scope of this
+survey despite making up a significant relative portion of the total cost.
+
+3.2 RF System
+
+Two RF systems have been selected, providing about at least 2% momentum acceptance, as a good
+compromise between beam lifetime, investment costs and operation costs. A state of the art active
+3rd order harmonic cavity system for bunch length control is also being considered for lengthening
+in standard user operation as well as the special operation modes and SSMB. The costs of the RF
+systems are given in Tab. 3.1 including RF cavities, harmonic cavities, wave guides, transmitters and
+LLRF systems as well as water cooling and diagnostics equipment.
+
+3.3 Vacuum System
+
+The following components are considered part of the vacuum system costs, and are estimated in Tab.
+Pumping: Cables, pumps for bending magnets, NEG cartridges per bending magnet, pump controllers for pumps 
+in bending magnets, pumps for 500 MHz cavities, pump controllers for pumps in
+500 MHz cavities, pumps for straight sections, pump controllers for straight sections.
+
+Vacuum Chamber and Valves: ID chambers, Arc chambers, NEG coatings for ring and transfer
+line, bellows, bending magnet chamber, front end systems for IDs and bending magnets, transfer line
+chamber, storage ring valves, valves for beam ports, photon absorbers, transfer line valves.
+
+Diagnostics: Gauges for straights and arcs, BPM blocks, PCTs for storage ring, FCTs for injector
+and transfer line, ICTs, diagnostics striplines, stripline kickers transversal and longitudinal, clearing
+electrodes for the storage ring, FOMs for linac and storage ring.
+
+Front End Systems: In particular the front ends have an expensive scaling factor. Maximized
+use of all available source points around the ring are assumed. Typically, the number of front ends is
+limited by the existing space in the experimental hall. Distance from the center and available angle are
+the relevant parameters, and therefore the ring circumference is considered as scaling factor. BESSY
+II has one bending magnet front end per 8 m, while MLS I has one bending magnet front end per
+3.5 m. Therefore, as an approximation, one bending magnet front end per 5 m of circumference is
+applied.
+
+3.4 Girders
+
+The costs of the girders have been considered assuming individual girders for all bending magnets.
+Multipole magnets are sharing joint girders and the costs of these girders scale with the number of
+multipole magnets. Modifications and smaller tools for easier alignment are also considered, but no
+laser system. The sum of all these components is estimated in Tab. 3.3.
+
+3.5 Magnet Systems
+
+Because of the requirement to be able to ramp the machine, only electromagnets are considered for
+bending magnets, quadrupole magnets, sextupole magnets and octupole magnets. Skew quadrupole
+as well as steerers will use existing coils on the sextupole magnets. In addition, the required aperture
+for the electron beam is in the same order of magnitude as for MLS I and quite large compared to
+newest MBA sources, resulting in a rather large bore radius of the magnets. Therefore, conventional
+magnets with relaxed specifications and a high technology readiness level can be used, which are of
+similar parameters as used for MLS I.
+The following components are considered in this section and included in Tab. 3.4: Water cooling for
+each magnet, bending magnets for the storage ring, quadrupole magnets for the storage ring, sextupole
+magnets for the storage ring, octupole magnets for the storage ring, magnets for the injection line as
+well as magnets for the magnets transfer line.
+
+3.6 Power Supplies
+
+The following power supplies have been considered in this section and are included in Tab. 3.5: Bending
+magnets are powered in series by an individual power supply. For simplicity of scaling, individual power
+supplies for all sextupoles and quadrupoles are assumed. This is also in agreement with the experience
+of complex user-tailored electron beam optics at MLS I, which require individual power supplies.
+
+3.7 Diagnostics
+
+The beam diagnostics components considered for this study include the BPM electronics, a bunchby-bunch 
+feedback system consisting of two transverse and one longitudinal unit and the necessary
+amplifiers, four beam loss monitors per arc, 10 oscilloscopes, five spectrum analyzers, a streak camera
+and two source point imaging systems. The estimation is given in Tab. 3.6.
+
+3.8 Injector
+
+For the injector, there are three options:• A full energy linac
+• A 50 - 100 MeV linac or microtron followed by a booster synchrotron ramping up to about 0.8 1.0 GeV.
+• A 100 MeV linac or microtron and a ramped synchrotron as for MLS I. However, this option is
+out of specifications and is only mentioned here as an alternative, as it is a very efficient approach
+with smaller cost.
+
+The full energy linac and booster solutions scale very differently. In particular, the footprint for
+the booster is an issue since the MLS II is a very compact ring and therefore the standard approach
+to place the booster inside the storage ring is a difficult task and not desirable from the radiation
+protection point of view. Within the uncertainty range of this survey, both approaches are in the
+same order of magnitude for the costs. Therefore, here the example of a normal conducting full energy
+linac is followed. The estimation is shown in Tab. 3.7. The option of a recirculating linac should be
+investigated during the technical design process for the benefit of cost savings.
+
+3.9 Control System
+
+The costs considered for the control system are estimated in Tab. 3.8 and contain the following
+subsystems: interlock system for radiation protection, interlock systems for machine protection (water,
+temperature, vacuum), a state of the art control room, timing system and software licenses. This
+section does not contain contributions for network or server infrastructure.
+
+3.10 Radiation Protection
+
+For the radiation protection measures estimated in Tab. 3.9, the following components have been
+considered: equipment for local dose rate measurements in the full accelerator system and at the
+outside of the beam ports in the experimental hall, cables, and radiation protection walls (1m width,
+normal concrete) for storage ring and linac as well as the bunker roof (0.5m width, normal concrete).
+3.11 Insertion devices
+
+Only permanent magnet based, warm, out-of-vacuum insertion devices have been considered as possible
+insertion devices for MLS II. The difference in costs for a planar undulator compared to an elliptical
+undulator has been neglected, i.e. a cost average was used for the estimations in Tab. 3.10.
+
+3.12 Infrastructure
+
+The following infrastructure components have been considered and are given in Tab. 3.11: network,
+servers, storage, and an uninterruptible power supply to buffer the whole facility. Since there is only
+a weak scaling within the parameters of this survey, a fixed value is used. Air conditioning and water
+cooling systems are explicitly not covered in here, as they are part of the building infrastructure.
+
+3.13 Footprint
+
+To calculate the footprint of the facility, the approximation of a circular shape was used for the ring
+and a rectangular shape for the linac. The following recipe was used to derive the estimation given in
+Tab. 3.12:
+• Calculate radius from circumference
+• Add 3 m for space requirements as well as 1 m for radiation protection wall
+• Calculate area of storage ring with new radius
+• Add 25 m linac length with a 5 m space requirement +1 m radiation protection wall at each side
+3.14 Spare Parts
+
+A detailed analysis of the required investment in spare components has to be performed at a later
+stage in the technical design process. At this point, we approximate these cost to be about 10% of the
+total accelerator system costs as given in Tab. 3.13.
+
+3.15 Power Consumption
+
+The operation costs of MLS II will be dominated by the power consumption due to a very high value of
+about 8000 h accelerator uptime. The main contributors to the power consumption are: RF systems,
+bending magnets, quadrupole magnets and sextupole magnets. Because of the small electron energy
+compared to other storage rings, the power consumption is quite low, but since MLS II has to be
+rampable over a large energy range, permanent magnet solutions cannot be applied to further decrease
+the magnet power consumption. An overview is given in Tab. 3.14
+
+3.16 Conclusion
+
+The total cost of all subsystems together is given in Tab. 3.15. As the MLS II is a very compact storage
+ring, its costs are dominated by offset terms, i.e. the price per meter circumference is quite high. The
+largest uncertainty factor is the cost of the injectior. This item also has the highest potential for cost
+savings in case the requirement for top-up operation outlined in the science case is reevaluated. It
+should be noted again here that all the costs given are investment costs, i.e. FTEs are explicitly not
+considered.
+
+Chapter 4
+Conclusion
+
+The parameter survey addresses the requirements for a green field design of an MLS I successor with
+high reliability, high availability and high uptime. The request for top-up operation, a dedicated low-alpha 
+operation mode and tunable electron energy in the range between 150 MeV and 800 MeV are reflected in four 
+lattices that were studied. The four lattices under study were optimized in terms of dynamic aperture and 
+momentum acceptance. The tune was optimized to improve the nonlinear performance. Lattices with reduced emittance
+were studied in form of two QBA lattices. Within the parameter survey, lattice candidates for a potential green-field 
+MLS II were found. However, the parameter survey is not a design report. Dealing with collective effects will be 
+a demanding challenge in the design process and could potentially be performance limiting.
