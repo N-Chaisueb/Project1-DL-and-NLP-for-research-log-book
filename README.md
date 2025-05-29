@@ -17,7 +17,7 @@
 - MLS is an electron circular accelerator providing synchrotron radiation in terahertz (THz) to extreme ultraviolet (EUV) regime.
 - Textual dataset includes date and time, researcher names, experiments, results, issues, and conclusion.
 
-## Model
+## Models
 ### 1. Transformer model
 - Transformer model is a type of deep learning model that can capture long-range dependencies between input data in a sequence by using self-attention mechanisms.
 - The self-attention mechanisms allow the transformer model to attend to all positions in the input sequence simultaneously to capture long-range dependencies and focus on relevant parts of the input sequence. That means they provide a parallel computation.
